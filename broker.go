@@ -298,7 +298,7 @@ func (b *Broker) Services(ctx context.Context) []brokerapi.Service {
 			PlanUpdatable: false,
 			Plans: []brokerapi.ServicePlan{
 				brokerapi.ServicePlan{
-					ID:          fmt.Sprintf("%s.%s", b.serviceID, VaultPlanName),
+					ID:          fmt.Sprintf("%s-%s", b.serviceID, VaultPlanName),
 					Name:        VaultPlanName,
 					Description: VaultPlanDescription,
 					Free:        brokerapi.FreeValue(true),
