@@ -8,4 +8,5 @@ RUN go get . && go help gopath && CGO_ENABLED=0 GOOS=linux go build -a -installs
 # final stage
 FROM centurylink/ca-certs
 COPY --from=build-env /app /
+EXPOSE 8000
 CMD ["/app"]
